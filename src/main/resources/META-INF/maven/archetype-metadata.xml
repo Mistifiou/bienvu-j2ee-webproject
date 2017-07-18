@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="basic">
+
+	<!-- attributs du projet -->
+	<requiredProperties>
+		<requiredProperty key="jquery-version">
+			<defaultValue>2.1.4</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="bootstrap-version">
+			<defaultValue>3.3.5</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="jdk-version">
+			<defaultValue>1.8</defaultValue>
+		</requiredProperty>
+
+
+		<requiredProperty key="maven-war-plugin-version">
+			<defaultValue>2.1.1</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="maven-glassfish-plugin-version">
+			<defaultValue>2.1</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="glassfish-dir">
+			<defaultValue>C:\\glassfish4\\glassfish</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="glassfish-user">
+			<defaultValue>admin</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="glassfish-password">
+			<defaultValue>1234</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="glassfish-http-port">
+			<defaultValue>8080</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="glassfish-admin-port">
+			<defaultValue>4848</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="glassfish-domain-name">
+			<defaultValue>domain1</defaultValue>
+		</requiredProperty>
+
+		<requiredProperty key="webjars-version">
+			<defaultValue>1.1</defaultValue>
+		</requiredProperty>
+		
+		
+		<requiredProperty key="datasource-classname">
+			<defaultValue>com.mysql.jdbc.jdbc2.optional.MysqlDataSource</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="datasource-url">
+			<defaultValue>127.0.0.1</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+
+	<!-- Fichiers de template à compiler (filtered = true) -->
+	<fileSets>
+		<fileSet filtered="true">
+			<directory>src/main/resources</directory>
+
+			<!--Filters example -->
+			<includes>
+				<include>*.txt</include>
+			</includes>
+			<excludes>
+				<exclude>**/*.xml</exclude>
+			</excludes>
+		</fileSet>
+		
+		<fileSet filtered="true">
+			<directory>src/main/webapp</directory>
+
+			<!--Filters example -->
+			<includes>
+				<include>*.xhtml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>src/main/webapp/WEB-INF</directory>
+
+			<!--Filters example -->
+			<includes>
+				<include>*.xml</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="true">
+			<directory>src/main/webapp/resources/js</directory>
+
+			<!--Filters example -->
+			<includes>
+				<include>*.js</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="true">
+			<directory>src/main/webapp/resources/css</directory>
+
+			<!--Filters example -->
+			<includes>
+				<include>*.css</include>
+			</includes>
+		</fileSet>
+
+		<fileSet filtered="true" packaged="true">
+			<directory>src/main/java</directory>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>src/test/java</directory>
+		</fileSet>
+	</fileSets>
+
+</archetype-descriptor>

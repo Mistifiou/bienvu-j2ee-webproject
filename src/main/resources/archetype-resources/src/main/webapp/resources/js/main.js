@@ -1,0 +1,1 @@
+$("#jstest").css("color", "blue");

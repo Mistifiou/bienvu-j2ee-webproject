@@ -1,15 +1,90 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>$com.bv.archetypes.jee</groupId>
-  <artifactId>$webproject</artifactId>
-  <version>$0.0.1-SNAPSHOT</version>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+	<version>${version}</version>	
+	
+	<!-- DEPENDENCIES -->
+	
+	<dependencies>
+		<!-- WEB DEPENDENCIES -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${bootstrap-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>${jquery-version}</version>
+		</dependency>
+
+		<!-- WEB DEPENDENCIES SERVLET -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-servlet-2.x</artifactId> <!-- permet l'import de css et js -->
+			<version>${webjars-version}</version>
+		</dependency>
+
+		<!-- ADD LOCAL DEPENDENCIES HERE -->
+
+	</dependencies>
+	
+	<!-- BUILD -->
+	<build>
+		<finalName>$webproject</finalName>
+
+		<!-- COMPILER LAST VERSION -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>${jdk-version}</source>
+					<target>${jdk-version}</target>
+				</configuration>
+			</plugin>
+		
+		<!-- Build war -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven-war-plugin-version}</version>
+				<configuration>
+					<webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+				</configuration>
+			</plugin>
+
+		<!-- GLASSFISH MODULE FOR LOCALHOST -->
+			<plugin>
+				<groupId>org.glassfish.maven.plugin</groupId>
+				<artifactId>maven-glassfish-plugin</artifactId>
+				<version>${maven-glassfish-plugin-version}</version>
+				<configuration>
+					<glassfishDirectory>${glassfish-dir}</glassfishDirectory>
+					<user>${glassfish-user}</user>
+					<adminPassword>${glassfish-password}</adminPassword>
+					<domain>
+						<name>${glassfish-domain-name}</name>
+						<httpPort>${glassfish-http-port}</httpPort>
+						<adminPort>${glassfish-admin-port}</adminPort>
+					</domain>
+					<components>
+						<component>
+							<name>${project.artifactId}</name>
+							<artifact>target/${project.build.finalName}.war</artifact>
+						</component>
+					</components>
+					<debug>true</debug>
+					<terse>false</terse>
+					<echo>true</echo>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+	<packaging>war</packaging>
+	
 </project>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Development</param-value> <!-- TODO : CHANGE VALUE WHEN PRODUCTION -->
+	</context-param>
+
+	<context-param>
+		<param-name>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name> <!-- EMPTY STRING = NULL IN CONTROLERS -->
+		<param-value>true</param-value>
+	</context-param>
+
+	<welcome-file-list>
+		<welcome-file>index.xhtml</welcome-file>
+	</welcome-file-list>
+
+
+
+	<servlet> <!-- WEBJAR SERVLET FOR IMPORTED CSS AND JS VIA MAVEN -->
+		<servlet-name>WebjarsServlet</servlet-name>
+		<servlet-class>org.webjars.servlet.WebjarsServlet</servlet-class>
+		<init-param>
+			<param-name>disableCache</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	
+	
+	<servlet> <!-- JSF IMPLEMENTATION -->
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+	<servlet-mapping>
+		<servlet-name>WebjarsServlet</servlet-name>
+		<url-pattern>/webjars/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	
+	<filter> <!-- FORCE ENCODING UTF-8 -->
+        <filter-name>charEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>charEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+	<data-source> <!-- EMBEDDED DATASOURCE -->
+		<name>java:app/${artifactId}-datasource</name>
+		<class-name>${datasource-classname}</class-name>
+
+		<server-name>${datasource-url}</server-name>
+		<database-name>${artifactId}</database-name>
+		<user>${artifactId}</user>
+		<password>${datasource-password}</password>
+
+		<transactional>true</transactional>
+		<isolation-level>TRANSACTION_READ_COMMITTED</isolation-level>
+		<initial-pool-size>2</initial-pool-size>
+		<max-pool-size>10</max-pool-size>
+		<min-pool-size>5</min-pool-size>
+		<max-statements>0</max-statements>
+	</data-source>
+</web-app>
