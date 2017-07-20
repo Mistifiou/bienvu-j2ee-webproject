@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bv.archetypes.jee</groupId>
 	<artifactId>webproject</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>Archetype - webproject</name>
 	<url>http://maven.apache.org</url>
 
@@ -11,13 +11,13 @@
 		<repository>
 			<id>packagecloud-travis</id>
 			<url>
-					packagecloud+https://packagecloud.io/mistifiou/jee-webproject-maven-template
+					packagecloud+https://packagecloud.io/mistifiou/public-jee-webproject-maven-template
 				</url>
 		</repository>
 		<snapshotRepository>
 			<id>packagecloud-travis</id>
 			<url>
-					packagecloud+https://packagecloud.io/mistifiou/jee-webproject-maven-template
+					packagecloud+https://packagecloud.io/mistifiou/public-jee-webproject-maven-template
 				</url>
 		</snapshotRepository>
 	</distributionManagement>
