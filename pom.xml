@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bv.archetypes.jee</groupId>
 	<artifactId>webproject</artifactId>
-	<version>0.0.2</version>
+	<version>1.0.1</version>
 	<name>Archetype - webproject</name>
 	<url>http://maven.apache.org</url>
 
