@@ -33,7 +33,7 @@
 	
 	<!-- BUILD -->
 	<build>
-		<finalName>$webproject</finalName>
+		<finalName>${artifactId}</finalName>
 
 		<!-- COMPILER LAST VERSION -->
 		<plugins>
