@@ -23,6 +23,7 @@
 	</distributionManagement>
 
 	<build>
+	<!-- JAVADOC AND SOURCE CODE -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -52,7 +53,7 @@
 			</plugin>
 
 		</plugins>
-		
+
 		<extensions>
 			<!-- PACKAGE CLOUD -->
 			<extension>
