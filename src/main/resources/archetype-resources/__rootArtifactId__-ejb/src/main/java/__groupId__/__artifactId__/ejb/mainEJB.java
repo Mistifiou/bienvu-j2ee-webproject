@@ -24,9 +24,9 @@ import javax.persistence.PostRemove;
 import javax.persistence.PostUpdate;
 import javax.servlet.http.Part;
 
-import com.bv.citizen.dao.DAOException;
-import com.bv.citizen.dao.DAO_Model;
-import com.citizen.entity.E_Modele;
+import ${groupId}.${artifactId}.model.dao.DAOException;
+import ${groupId}.${artifactId}.model.dao.User_dao;
+import import ${groupId}.${artifactId}.model.entities.User_entity;
 
 /**
  * - Enregistre les nouvelles database en BD - Liste les database existantes
@@ -42,11 +42,11 @@ public class mainEJB implements Serializable {
 
 	private string example = "hello ${artifactId}";
 	
-	/* TODO
+	
 	@EJB
 	private DAO_User user_dao;
-	*/	
-	
+		
+
 	public string sayHello(){
 		return this.example;
 	}
