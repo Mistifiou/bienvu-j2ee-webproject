@@ -7,8 +7,6 @@
 	<name>Archetype - webproject</name>
 	<url>http://maven.apache.org</url>
 
-	<packaging>pom</packaging>
-
 	<!-- <distributionManagement> <repository> <id>packagecloud-travis</id> 
 		<url> packagecloud+https://packagecloud.io/mistifiou/jee-webproject-maven-template 
 		</url> </repository> <snapshotRepository> <id>packagecloud-travis</id> <url> 

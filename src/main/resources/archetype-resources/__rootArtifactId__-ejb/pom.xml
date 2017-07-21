@@ -1,14 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupId}</groupId>
+	<parent>
+		<groupId>${groupId}</groupId>
+		<artifactId>${rootArtifactId}</artifactId>
+		<version>${version}</version>
+	</parent>
 	<artifactId>${artifactId}</artifactId>
-	<version>${version}</version>	
-	
 	<packaging>ejb</packaging>
-	
+
 	<!-- DEPENDENCIES -->
-	
+
 	<dependencies>
 		<!-- WEB DEPENDENCIES -->
 		<dependency>
@@ -32,7 +34,7 @@
 		<!-- ADD LOCAL DEPENDENCIES HERE -->
 
 	</dependencies>
-	
+
 	<!-- BUILD -->
 	<build>
 		<finalName>${artifactId}</finalName>
@@ -48,8 +50,8 @@
 					<target>${jdk-version}</target>
 				</configuration>
 			</plugin>
-		
-		<!-- Build war -->
+
+			<!-- Build war -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -59,7 +61,7 @@
 				</configuration>
 			</plugin>
 
-		<!-- GLASSFISH MODULE FOR LOCALHOST -->
+			<!-- GLASSFISH MODULE FOR LOCALHOST -->
 			<plugin>
 				<groupId>org.glassfish.maven.plugin</groupId>
 				<artifactId>maven-glassfish-plugin</artifactId>
@@ -88,5 +90,5 @@
 		</plugins>
 	</build>
 	<packaging>war</packaging>
-	
+
 </project>

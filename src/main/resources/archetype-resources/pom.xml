@@ -5,6 +5,8 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>	
 	
+	<packaging>pom</packaging>
+	
 	<modules>
     	<module>${rootArtifactId}-ejb</module>
     </modules>
@@ -30,9 +32,7 @@
 			<artifactId>webjars-servlet-2.x</artifactId> <!-- permet l'import de css et js -->
 			<version>${webjars-version}</version>
 		</dependency>
-
 		<!-- ADD LOCAL DEPENDENCIES HERE -->
-
 	</dependencies>
 	
 	<!-- BUILD -->

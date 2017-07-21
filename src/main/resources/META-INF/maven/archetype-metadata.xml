@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor name="basic">
+<archetype-descriptor name="${artifactId}">
 
-	 <module id="${rootArtifactId}-ejb" dir="__rootArtifactId__-ejb" name="${rootArtifactId}-ejb">
-        <fileSets>
-            <fileSet filtered="true" packaged="true" encoding="UTF-8">
-                <directory>src/main/java</directory>
-            </fileSet>
-            <fileSet encoding="UTF-8">
-                <directory>src/main/resources</directory>
-            </fileSet>
-            <fileSet filtered="true" packaged="true" encoding="UTF-8">
-                <directory>src/test/java</directory>
-            </fileSet>
-             <fileSet encoding="UTF-8">
-                <directory>src/test/resources</directory>
-             </fileSet>
-        </fileSets>
-    </module>
+	<modules>
+		<module id="${rootArtifactId}-ejb" dir="${artifactId}-ejb"
+			name="${rootArtifactId}-ejb">
+			<fileSets>
+				<fileSet filtered="true" packaged="true" encoding="UTF-8">
+					<directory>src/main/java</directory>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>src/main/resources</directory>
+				</fileSet>
+				<fileSet filtered="true" packaged="true" encoding="UTF-8">
+					<directory>src/test/java</directory>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>src/test/resources</directory>
+				</fileSet>
+			</fileSets>
+		</module>
+	</modules>
 
 	<!-- attributs du projet -->
 	<requiredProperties>
@@ -59,10 +62,11 @@
 		<requiredProperty key="webjars-version">
 			<defaultValue>1.1</defaultValue>
 		</requiredProperty>
-		
-		
+
+
 		<requiredProperty key="datasource-classname">
-			<defaultValue>com.mysql.jdbc.jdbc2.optional.MysqlDataSource</defaultValue>
+			<defaultValue>com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+			</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="datasource-url">
 			<defaultValue>127.0.0.1</defaultValue>
@@ -82,7 +86,7 @@
 				<exclude>**/*.xml</exclude>
 			</excludes>
 		</fileSet>
-		
+
 		<fileSet filtered="true">
 			<directory>src/main/webapp</directory>
 
@@ -99,7 +103,7 @@
 				<include>*.xml</include>
 			</includes>
 		</fileSet>
-		
+
 		<fileSet filtered="true">
 			<directory>src/main/webapp/resources/js</directory>
 
@@ -108,7 +112,7 @@
 				<include>*.js</include>
 			</includes>
 		</fileSet>
-		
+
 		<fileSet filtered="true">
 			<directory>src/main/webapp/resources/css</directory>
 
