@@ -10,6 +10,8 @@
 	<persistence-unit name="${artifactId}-pu">
 	
 	<jta-data-source>java:app/${rootArtifactId}-ds</jta-data-source>
+	
+		<class>${groupId}.${artifactId}.model.entities.User_entity</class>
 
 		<properties>
 			<property name="eclipselink.logging.level" value="INFO" />
