@@ -44,7 +44,7 @@ public class mainEJB implements Serializable {
 	
 	
 	@EJB
-	private DAO_User user_dao;
+	private User_dao user_dao;
 		
 
 	public String sayHello(){

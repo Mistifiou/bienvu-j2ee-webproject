@@ -76,6 +76,32 @@
 					</modules>
 				</configuration>
 			</plugin>
+			
+			<!-- GLASSFISH MODULE FOR LOCALHOST -->
+			<plugin>
+				<groupId>org.glassfish.maven.plugin</groupId>
+				<artifactId>maven-glassfish-plugin</artifactId>
+				<version>${maven-glassfish-plugin-version}</version>
+				<configuration>
+					<glassfishDirectory>${glassfish-dir}</glassfishDirectory>
+					<user>${glassfish-user}</user>
+					<adminPassword>${glassfish-password}</adminPassword>
+					<domain>
+						<name>${glassfish-domain-name}</name>
+						<httpPort>${glassfish-http-port}</httpPort>
+						<adminPort>${glassfish-admin-port}</adminPort>
+					</domain>
+					<components>
+						<component>
+							<name>${project.artifactId}</name>
+							<artifact>target/${project.build.finalName}.ear</artifact>
+						</component>
+					</components>
+					<debug>true</debug>
+					<terse>false</terse>
+					<echo>true</echo>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
