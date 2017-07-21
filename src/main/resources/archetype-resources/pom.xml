@@ -5,6 +5,10 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>	
 	
+	<modules>
+    	<module>${rootArtifactId}-ejb</module>
+    </modules>
+	
 	<!-- DEPENDENCIES -->
 	
 	<dependencies>

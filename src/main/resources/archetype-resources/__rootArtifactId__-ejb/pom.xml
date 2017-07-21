@@ -5,6 +5,8 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>	
 	
+	<packaging>ejb</packaging>
+	
 	<!-- DEPENDENCIES -->
 	
 	<dependencies>
