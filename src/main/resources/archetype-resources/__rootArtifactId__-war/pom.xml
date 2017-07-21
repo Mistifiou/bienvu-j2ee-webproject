@@ -34,7 +34,13 @@
 		</dependency>
 
 		<!-- ADD LOCAL DEPENDENCIES HERE -->
-
+		<dependency>
+			<!-- 3.3. Dependency on EJB Module. -->
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-ejb</artifactId>
+			<version>${version}</version>
+			<type>ejb</type>
+		</dependency>
 	</dependencies>
 
 	<!-- BUILD -->

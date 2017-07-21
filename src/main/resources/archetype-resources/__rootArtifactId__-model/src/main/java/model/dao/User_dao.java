@@ -1,4 +1,4 @@
-package ${rootArtifactId}.model.dao;
+package ${package}.model.dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import ${rootArtifactId}.model.entities.User_entity;
+import ${package}.model.entities.User_entity;
 
 /**
  * DAO database, CRUD sur les entitées database
@@ -88,7 +88,7 @@ public class User_dao implements Serializable {
 	 */
 	public List<User_entity> list() throws DAOException {
 		try {
-			TypedQuery<User_entity> requete = em.createQuery(JPQL_SELECT_ALL, E_Modele.class);
+			TypedQuery<User_entity> requete = em.createQuery(JPQL_SELECT_ALL, User_entity.class);
 			return requete.getResultList();
 		} catch (NoResultException e) {
 			System.out.println("NO RESULT FOR REQUEST " + JPQL_SELECT_ALL);

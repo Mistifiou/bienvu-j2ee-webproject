@@ -1,4 +1,4 @@
-package ${rootArtifactId}.model.entities;
+package ${package}.model.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -19,26 +19,26 @@ public class User_entity implements Serializable {
 	@Column(name="id")
 	private long id;
 	
-	@column(name="firstName")
-	private string firstName;
+	@Column(name="firstName")
+	private String firstName;
 
-	@column(name="subName")
-	private string subName;
+	@Column(name="subName")
+	private String subName;
 	
-	public string getSubName(){
+	public String getSubName(){
 		return this.subName;
 	}
 	
-	public void setSubName(string name){
+	public void setSubName(String subName){
 		this.subName = subName;
 	}
 	
 	
-	public string getFirstName(){
+	public String getFirstName(){
 		return this.firstName;
 	}
 	
-	public void setFirstName(string name){
+	public void setFirstName(String firstName){
 		this.firstName = firstName;
 	}
    

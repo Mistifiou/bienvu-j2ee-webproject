@@ -11,9 +11,6 @@
 	<artifactId>${artifactId}</artifactId>
 
 	<packaging>ear</packaging>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 
 	<!-- DEPENDENCIES -->
 
@@ -36,16 +33,16 @@
 			<!-- 3.3. Dependency on EJB Module. -->
 			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-ejb</artifactId>
-			<type>${version}</type>
-			<version>1.0</version>
+			<version>${version}</version>
+			<type>ejb</type>
 		</dependency>
 
 		<dependency>
 			<!-- 3.4. Dependency on Web Application Module. -->
 			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-war</artifactId>
-			<type>${version}</type>
-			<version>1.0</version>
+			<version>${version}</version>
+			<type>war</type>
 		</dependency>
 	</dependencies>
 
@@ -53,7 +50,6 @@
 	<build>
 		<finalName>${artifactId}</finalName>
 
-		<!-- COMPILER LAST VERSION -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

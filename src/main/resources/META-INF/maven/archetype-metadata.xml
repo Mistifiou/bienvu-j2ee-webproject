@@ -58,6 +58,9 @@
 
 				<fileSet filtered="true" encoding="UTF-8">
 					<directory>src/main/webapp</directory>
+				</fileSet>	
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>src/main/webapp/WEB-INF</directory>
 				</fileSet>				
 			</fileSets>
 		</module>

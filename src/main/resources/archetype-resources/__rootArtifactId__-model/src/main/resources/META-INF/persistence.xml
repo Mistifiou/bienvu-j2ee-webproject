@@ -11,7 +11,7 @@
 	
 	<jta-data-source>java:app/${rootArtifactId}-ds</jta-data-source>
 	
-		<class>${rootArtifactId}.model.entities.User_entity</class>
+		<class>${package}.model.entities.User_entity</class>
 
 		<properties>
 			<property name="eclipselink.logging.level" value="INFO" />

@@ -1,4 +1,4 @@
-package ${rootArtifactId}.ejb;
+package ${package}.ejb;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -24,9 +24,9 @@ import javax.persistence.PostRemove;
 import javax.persistence.PostUpdate;
 import javax.servlet.http.Part;
 
-import ${rootArtifactId}.model.dao.DAOException;
-import ${rootArtifactId}.model.dao.User_dao;
-import import ${rootArtifactId}.model.entities.User_entity;
+import ${package}.model.entities.User_entity;
+import ${package}.model.dao.DAOException;
+import ${package}.model.dao.User_dao;
 
 /**
  * - Enregistre les nouvelles database en BD - Liste les database existantes
