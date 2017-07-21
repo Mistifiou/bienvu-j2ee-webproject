@@ -113,7 +113,7 @@
 				<fileSet filtered="true" packaged="true" encoding="UTF-8">
 					<directory>src/main/java</directory>
 				</fileSet>
-				<fileSet encoding="UTF-8">
+				<fileSet encoding="UTF-8" filtered="true">
 					<directory>src/main/resources</directory>
 				</fileSet>
 				<fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -129,15 +129,40 @@
 	<!-- attributs du projet -->
 	<requiredProperties>
 		<!-- MODEL MODULE -->
-		<requiredProperty key="datasource-classname">
-			<defaultValue>com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-			</defaultValue>
+		<requiredProperty key="hibernatecore-version">
+			<defaultValue>5.2.10.Final</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="datasource-url">
-			<defaultValue>127.0.0.1</defaultValue>
+		
+		<requiredProperty key="eclipsepersistencecore-version">
+			<defaultValue>2.6.4.Final</defaultValue>
 		</requiredProperty>
+		
+		<requiredProperty key="eclipsepersistencejpa-version">
+			<defaultValue>2.6.4</defaultValue>
+		</requiredProperty>
+		
+		<requiredProperty key="ejbapi-version">
+			<defaultValue>3.0</defaultValue>
+		</requiredProperty>		
 
 		<!-- EJB MODULE -->
+		<requiredProperty key="servletapi-version">
+			<defaultValue>3.1.0</defaultValue>
+		</requiredProperty>	
+		
+		<requiredProperty key="faces-version">
+			<defaultValue>2.2</defaultValue>
+		</requiredProperty>	
+		<requiredProperty key="cdiapi-version">
+			<defaultValue>2.0</defaultValue>
+		</requiredProperty>	
+		<requiredProperty key="ejbapi-version">
+			<defaultValue>3.0</defaultValue>
+		</requiredProperty>	
+		
+		<requiredProperty key="compilerplugin-version">
+			<defaultValue>3.0</defaultValue>
+		</requiredProperty>	
 
 		<!-- WAR MODULE -->
 		<requiredProperty key="jquery-version">
@@ -145,9 +170,13 @@
 		</requiredProperty>
 		<requiredProperty key="bootstrap-version">
 			<defaultValue>3.3.5</defaultValue>
+		<requiredProperty key="datasource-classname">
+			<defaultValue>com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+			</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="jdk-version">
-			<defaultValue>1.8</defaultValue>
+		<requiredProperty key="datasource-url">
+			<defaultValue>127.0.0.1</defaultValue>
+		</requiredProperty>
 		</requiredProperty>
 
 
@@ -177,10 +206,18 @@
 		</requiredProperty>
 
 		<requiredProperty key="webjars-version">
-			<defaultValue>1.1</defaultValue>
+			<defaultValue>1.5</defaultValue>
 		</requiredProperty>
 
 		<!-- GENERAL -->
+		
+		<requiredProperty key="jdk-version">
+			<defaultValue>1.8</defaultValue>
+		</requiredProperty>
+		
+		<requiredProperty key="junit-version">
+			<defaultValue>3.8.1</defaultValue>
+		</requiredProperty>			
 
 	</requiredProperties>
 	

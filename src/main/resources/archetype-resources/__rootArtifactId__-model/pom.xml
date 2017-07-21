@@ -18,24 +18,24 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.2.10.Final</version>
+			<version>${hibernatecore-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>org.eclipse.persistence.core</artifactId>
-			<version>2.6.4</version>
+			<version>${eclipsepersistencecore-version}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>org.eclipse.persistence.jpa</artifactId>
-			<version>2.6.4</version>
+			<version>${eclipsepersistencejpa-version}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.ejb</groupId>
 			<artifactId>ejb-api</artifactId>
-			<version>3.0</version>
+			<version>${ejbapi-version}</version>
 			<scope>provided</scope>
 		</dependency>	
 	</dependencies>
