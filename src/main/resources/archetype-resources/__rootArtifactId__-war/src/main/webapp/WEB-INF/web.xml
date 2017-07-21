@@ -67,7 +67,7 @@
 
 
 	<data-source> <!-- EMBEDDED DATASOURCE -->
-		<name>java:app/${artifactId}-datasource</name>
+		<name>java:app/${rootArtifactId}-ds</name>
 		<class-name>${datasource-classname}</class-name>
 
 		<server-name>${datasource-url}</server-name>

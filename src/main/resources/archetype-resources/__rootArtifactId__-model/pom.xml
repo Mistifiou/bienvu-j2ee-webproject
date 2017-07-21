@@ -6,48 +6,49 @@
 		<groupId>${groupId}</groupId>
 		<artifactId>${rootArtifactId}</artifactId>
 		<version>${version}</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>${artifactId}</artifactId>
 	
-	<packaging>ejb</packaging>
+	<packaging>jar</packaging>
 
 	<!-- DEPENDENCIES -->
 
 	<dependencies>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${servletapi-version}</version>
-			<scope>provided</scope>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.10.Final</version>
 		</dependency>
-
 		<dependency>
-			<groupId>javax.faces</groupId>
-			<artifactId>javax.faces-api</artifactId>
-			<version>${faces-version}</version>
-			<scope>provided</scope>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.core</artifactId>
+			<version>2.6.4</version>
+			<scope>compile</scope>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/javax.enterprise/cdi-api -->
 		<dependency>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
-			<version>${cdiapi-version}</version>
-			<scope>provided</scope>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.jpa</artifactId>
+			<version>2.6.4</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.ejb</groupId>
 			<artifactId>ejb-api</artifactId>
-			<version>${ejbapi-version}</version>
+			<version>3.0</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency>	
 	</dependencies>
 
 	<!-- BUILD -->
 	<build>
 		<finalName>${artifactId}</finalName>
 
-		
+		<!-- COMPILER LAST VERSION -->
+		<plugins>
+			
+
+		</plugins>
 	</build>
 
 </project>
