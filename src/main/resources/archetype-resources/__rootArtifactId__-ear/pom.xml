@@ -34,7 +34,7 @@
 			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-ejb</artifactId>
 			<version>${version}</version>
-			<type>ejb</type>
+			<type>jar</type>
 		</dependency>
 
 		<dependency>
@@ -63,10 +63,10 @@
 							<artifactId>${rootArtifactId}-util</artifactId>
 						</javaModule>
 						<!-- 4.5.2. Include EJB Module. -->
-						<ejbModule>
+						<javaModule>
 							<groupId>${groupId}</groupId>
 							<artifactId>${rootArtifactId}-ejb</artifactId>
-						</ejbModule>
+						</javaModule>
 						<!-- 4.5.3. Include Web Application Module. -->
 						<webModule>
 							<groupId>${groupId}</groupId>

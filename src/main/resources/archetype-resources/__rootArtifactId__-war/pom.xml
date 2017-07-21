@@ -39,7 +39,7 @@
 			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-ejb</artifactId>
 			<version>${version}</version>
-			<type>ejb</type>
+			<type>jar</type>
 		</dependency>
 	</dependencies>
 
