@@ -5,6 +5,8 @@ import javax.persistence.*;
 
 /**
  * Entity implementation class for Entity: User
+ * 
+ * Generated with com.github.mistifiou.webproject
  *
  */
 @Entity
