@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.ejb;
+package ${groupId}.${rootArtifactId}.ejb;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -24,9 +24,9 @@ import javax.persistence.PostRemove;
 import javax.persistence.PostUpdate;
 import javax.servlet.http.Part;
 
-import ${groupId}.${artifactId}.model.dao.DAOException;
-import ${groupId}.${artifactId}.model.dao.User_dao;
-import import ${groupId}.${artifactId}.model.entities.User_entity;
+import ${groupId}.${rootArtifactId}.model.dao.DAOException;
+import ${groupId}.${rootArtifactId}.model.dao.User_dao;
+import import ${groupId}.${rootArtifactId}.model.entities.User_entity;
 
 /**
  * - Enregistre les nouvelles database en BD - Liste les database existantes
@@ -40,14 +40,14 @@ import import ${groupId}.${artifactId}.model.entities.User_entity;
 public class mainEJB implements Serializable {
 	private static final long serialVersionUID = 1L; //TODO : change version UID
 
-	private string example = "hello ${artifactId}";
+	private String example = "'bienvenue' in project ${rootArtifactId}";
 	
 	
 	@EJB
 	private DAO_User user_dao;
 		
 
-	public string sayHello(){
+	public String sayHello(){
 		return this.example;
 	}
 	

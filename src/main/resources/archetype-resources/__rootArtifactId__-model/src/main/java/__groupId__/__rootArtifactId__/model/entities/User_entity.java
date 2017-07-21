@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.model.entities;
+package ${groupId}.${rootArtifactId}.model.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
