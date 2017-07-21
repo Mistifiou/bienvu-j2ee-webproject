@@ -1,4 +1,4 @@
-package ${groupId}.${rootArtifactId}.model.dao;
+package ${rootArtifactId}.model.dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import ${groupId}.${rootArtifactId}.model.entities.User_entity;
+import ${rootArtifactId}.model.entities.User_entity;
 
 /**
  * DAO database, CRUD sur les entitées database

@@ -104,7 +104,7 @@
 		</module>
 		
 		<module id="${rootArtifactId}-ear" dir="__rootArtifactId__-ear"
-			name="${rootArtifactId}-util">
+			name="${rootArtifactId}-ear">
 		</module>
 		
 		<module id="${rootArtifactId}-model" dir="__rootArtifactId__-model"
@@ -134,7 +134,7 @@
 		</requiredProperty>
 		
 		<requiredProperty key="eclipsepersistencecore-version">
-			<defaultValue>2.6.4.Final</defaultValue>
+			<defaultValue>2.6.4</defaultValue>
 		</requiredProperty>
 		
 		<requiredProperty key="eclipsepersistencejpa-version">

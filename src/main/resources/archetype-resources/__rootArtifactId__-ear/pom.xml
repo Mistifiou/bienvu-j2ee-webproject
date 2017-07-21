@@ -26,25 +26,25 @@
 		</dependency>
 
 		<dependency>
-			<groupId>${groupId}.util</groupId>
+			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-util</artifactId>
-			<version>1.0</version>
+			<version>${version}</version>
 			<type>jar</type>
 		</dependency>
 
 		<dependency>
 			<!-- 3.3. Dependency on EJB Module. -->
-			<groupId>${groupId}.ejb</groupId>
+			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-ejb</artifactId>
-			<type>ejb</type>
+			<type>${version}</type>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
 			<!-- 3.4. Dependency on Web Application Module. -->
-			<groupId>${groupId}.web</groupId>
+			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-war</artifactId>
-			<type>war</type>
+			<type>${version}</type>
 			<version>1.0</version>
 		</dependency>
 	</dependencies>
@@ -63,17 +63,17 @@
 					<modules>
 						<!-- 4.5.1. Include Java Module. -->
 						<javaModule>
-							<groupId>${groupId}.util</groupId>
+							<groupId>${groupId}</groupId>
 							<artifactId>${rootArtifactId}-util</artifactId>
 						</javaModule>
 						<!-- 4.5.2. Include EJB Module. -->
 						<ejbModule>
-							<groupId>${groupId}.ejb</groupId>
+							<groupId>${groupId}</groupId>
 							<artifactId>${rootArtifactId}-ejb</artifactId>
 						</ejbModule>
 						<!-- 4.5.3. Include Web Application Module. -->
 						<webModule>
-							<groupId>${groupId}.web</groupId>
+							<groupId>${groupId}</groupId>
 							<artifactId>${rootArtifactId}-war</artifactId>
 							<contextRoot>${rootArtifactId}</contextRoot>
 						</webModule>
