@@ -13,7 +13,13 @@ Objective for this project was to be hable de to create a new maven project with
 
 * Download jar file and pom.xml from [this link](https://packagecloud.io/mistifiou/public-jee-webproject-maven-template/maven2) and import this in eclipse.
 
-* create new maven based project and choose jee-webproject-maven-template template.
+* Create new maven based project and choose jee-webproject-maven-template template.
+
+* Go to [project-name]-war and check datasource definition to configure database
+
+* Go to [project-name]-ear and check build definition to update glassfish connexion attributes
+
+* Right click on core project **Build as -> Maven build -> clean install**
 
 This is [on GitHub](https://github.com/Mistifiou/maven-jee-earproject) so let me know if I've b0rked it somewhere.
 
