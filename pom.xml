@@ -10,13 +10,13 @@
 	<distributionManagement>
 		<repository>
 			<id>packagecloud-travis</id>
-			<url> packagecloud+https://packagecloud.io/mistifiou/jee-webproject-maven-template 
+			<url> packagecloud+https://packagecloud.io/mistifiou/public-jee-webproject-maven-template 
 		</url>
 		</repository>
 		<snapshotRepository>
 			<id>packagecloud-travis</id>
 			<url> 
-		packagecloud+https://packagecloud.io/mistifiou/jee-webproject-maven-template 
+		packagecloud+https://packagecloud.io/mistifiou/public-jee-webproject-maven-template 
 		</url>
 		</snapshotRepository>
 	</distributionManagement>
