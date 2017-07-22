@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.gituhb.mistifiou.maven</groupId>
-	<artifactId>jee-webproject</artifactId>
+	<groupId>com.gituhb.mistifiou</groupId>
+	<artifactId>maven-jee-earproject</artifactId>
 	<version>2.1.0</version>
 	<name>Archetype - webproject</name>
-	<url>http://maven.apache.org</url>
+	<url>https://github.com/Mistifiou/maven-jee-earproject</url>
 
 	<distributionManagement>
 		<repository>
