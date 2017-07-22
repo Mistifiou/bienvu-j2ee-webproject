@@ -67,13 +67,13 @@
 
 
 	<data-source> <!-- EMBEDDED DATASOURCE -->
-		<name>java:app/${artifactId}-datasource</name>
+		<name>java:app/${rootArtifactId}-ds</name>
 		<class-name>${datasource-classname}</class-name>
 
 		<server-name>${datasource-url}</server-name>
-		<database-name>${artifactId}</database-name>
-		<user>${artifactId}</user>
-		<password>${datasource-password}</password>
+		<database-name>${rootArtifactId}-database</database-name>
+		<user>${rootArtifactId}-database</user>
+		<password>${rootArtifactId}-database</password>
 
 		<transactional>true</transactional>
 		<isolation-level>TRANSACTION_READ_COMMITTED</isolation-level>

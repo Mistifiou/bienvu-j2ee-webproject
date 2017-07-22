@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>${groupId}</groupId>
+		<artifactId>${rootArtifactId}</artifactId>
+		<version>${version}</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>${artifactId}</artifactId>
+	
+	<packaging>jar</packaging>
+
+	<!-- DEPENDENCIES -->
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernatecore-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.core</artifactId>
+			<version>${eclipsepersistencecore-version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.jpa</artifactId>
+			<version>${eclipsepersistencejpa-version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>${ejbapi-version}</version>
+			<scope>provided</scope>
+		</dependency>	
+	</dependencies>
+
+	<!-- BUILD -->
+	<build>
+		<finalName>${artifactId}</finalName>
+
+		<!-- COMPILER LAST VERSION -->
+		<plugins>
+			
+
+		</plugins>
+	</build>
+
+</project>

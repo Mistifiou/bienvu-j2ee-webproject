@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>${groupId}</groupId>
+		<artifactId>${rootArtifactId}</artifactId>
+		<version>${version}</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>${artifactId}</artifactId>
+
+	<packaging>ear</packaging>
+
+	<!-- DEPENDENCIES -->
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-util</artifactId>
+			<version>${version}</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<!-- 3.3. Dependency on EJB Module. -->
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-ejb</artifactId>
+			<version>${version}</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<!-- 3.4. Dependency on Web Application Module. -->
+			<groupId>${groupId}</groupId>
+			<artifactId>${rootArtifactId}-war</artifactId>
+			<version>${version}</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+
+	<!-- BUILD -->
+	<build>
+		<finalName>${artifactId}</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<!-- 4.5. Specify modules to include. -->
+					<modules>
+						<!-- 4.5.1. Include Java Module. -->
+						<javaModule>
+							<groupId>${groupId}</groupId>
+							<artifactId>${rootArtifactId}-util</artifactId>
+						</javaModule>
+						<!-- 4.5.2. Include EJB Module. -->
+						<javaModule>
+							<groupId>${groupId}</groupId>
+							<artifactId>${rootArtifactId}-ejb</artifactId>
+						</javaModule>
+						<!-- 4.5.3. Include Web Application Module. -->
+						<webModule>
+							<groupId>${groupId}</groupId>
+							<artifactId>${rootArtifactId}-war</artifactId>
+							<contextRoot>${rootArtifactId}</contextRoot>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+			
+			<!-- GLASSFISH MODULE FOR LOCALHOST -->
+			<plugin>
+				<groupId>org.glassfish.maven.plugin</groupId>
+				<artifactId>maven-glassfish-plugin</artifactId>
+				<version>${maven-glassfish-plugin-version}</version>
+				<configuration>
+					<glassfishDirectory>${glassfish-dir}</glassfishDirectory>
+					<user>${glassfish-user}</user>
+					<adminPassword>${glassfish-password}</adminPassword>
+					<domain>
+						<name>${glassfish-domain-name}</name>
+						<httpPort>${glassfish-http-port}</httpPort>
+						<adminPort>${glassfish-admin-port}</adminPort>
+					</domain>
+					<components>
+						<component>
+							<name>${project.artifactId}</name>
+							<artifact>target/${project.build.finalName}.ear</artifact>
+						</component>
+					</components>
+					<debug>true</debug>
+					<terse>false</terse>
+					<echo>true</echo>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
