@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gituhb.mistifiou</groupId>
 	<artifactId>maven-jee-earproject</artifactId>
-	<version>2.1.0</version>
+	<version>2.1.1</version>
 	<name>Archetype - webproject</name>
 	<url>https://github.com/Mistifiou/maven-jee-earproject</url>
 
